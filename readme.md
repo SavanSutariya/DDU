@@ -1,5 +1,5 @@
 [![Last Commit](https://www.ddu.ac.in/images/University/nav-img.png)](https://www.ddu.ac.in/)
-# Dharmsinh Desai University | MCA Department | 2022-2024
+# Dharmsinh Desai University | MCA | 2022-2024
 
 ## Getting Started
 * Fork this repository (Click the Fork button, top right of this page)
