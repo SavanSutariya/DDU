@@ -1,4 +1,0 @@
-7,The_factorial_of_7_is_5040
-11,The_factorial_of_11_is_39916800
-12,The_factorial_of_12_is_479001600
-3,The_factorial_of_3_is_6
