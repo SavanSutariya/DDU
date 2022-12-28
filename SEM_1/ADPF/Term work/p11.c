@@ -1,11 +1,11 @@
 #include<stdio.h>    
 void printFib(int n){    
-    static int n1=0,n2=1,n3;    
+    static int a=0,b=1,c;    
     if(n>0){    
-         n3 = n1 + n2;    
-         n1 = n2;    
-         n2 = n3;    
-         printf("%d ",n3);    
+         c = a + b;
+         a = b;    
+         b = c;    
+         printf("%d ",b);
          printFib(n-1);    
     }    
 }    
@@ -13,7 +13,7 @@ int main(){
     int n;       
     scanf("%d",&n);    
     printf("Fibonacci Series: ");    
-    printf("%d %d ",0,1);    
+    printf("0 1 ");    
     printFib(n-2);
-  return 0;  
+    return 0;  
  }

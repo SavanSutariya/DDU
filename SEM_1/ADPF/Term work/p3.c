@@ -19,7 +19,7 @@ int main()
                     t[j] = '\0';
                     if(i == j)
                         match++; // count the number of matching positions
-                    // printf("%c <- s[%d] %c <- t[%d]\n",s[i],i,t[j],j);
+                    // printf("%c <- s[%d] %d <- t[%d]\n",s[i],i,t[j],j);
                     cnt++; // count the number of characters matched
                     break;
                 }

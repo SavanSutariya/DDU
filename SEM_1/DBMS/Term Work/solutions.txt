@@ -6,42 +6,56 @@ Order_detail(orderid,itemid) orderid foreign key from order_master, itemid is
 foreign key from Item table
 
 Create database Term_Work;
-Create table Item (itemid int(10) not null auto_increment, Iname varchar(20) not null, Price int(10) not null, primary key(itemid));
-Create table Customer (custid int(10) not null auto_increment, customername varchar(20) not null, city varchar(20) not null, primary key(custid));
-Create table Order_master (orderid int(10) not null auto_increment, custid int(10) not null, orderdate date not null, primary key(orderid), foreign key(custid) references Customer(custid));
-Create table Order_detail (orderid int(10) not null, itemid int(10) not null, foreign key(orderid) references Order_master(orderid), foreign key(itemid) references Item(itemid));
+Create table Item (itemid int(10) not null auto_increment,
+                 Iname varchar(20) not null, 
+                 Price int(10) not null, 
+                 primary key(itemid));
+Create table Customer (custid int(10) not null auto_increment,
+                 customername varchar(20) not null,
+                 city varchar(20) not null,
+                 primary key(custid));
+Create table Order_master (orderid int(10) not null auto_increment,
+                         custid int(10) not null, 
+                         orderdate date not null, 
+                         primary key(orderid), 
+                         foreign key(custid) references Customer(custid));
+Create table Order_detail (orderid int(10) not null,
+                         itemid int(10) not null, 
+                         foreign key(orderid) references Order_master(orderid), 
+                         foreign key(itemid) references Item(itemid));
+
 
 Insert into Item values (1, 'Laptop', 50000),
-(2, 'Mobile', 10000),
-(3, 'Tablet', 20000),
-(4, 'Camera', 30000),
-(5, 'Headphone', 5000),
-(6, 'Mouse', 1000),
-(7, 'Keyboard', 2000),
-(8, 'Speaker', 3000),
-(9, 'Charger', 500),
-(10, 'Pen Drive', 1000);
+                        (2, 'Mobile', 10000),
+                        (3, 'Tablet', 20000),
+                        (4, 'Camera', 30000),
+                        (5, 'Headphone', 5000),
+                        (6, 'Mouse', 1000),
+                        (7, 'Keyboard', 2000),
+                        (8, 'Speaker', 3000),
+                        (9, 'Charger', 500),
+                        (10, 'Pen Drive', 1000);
 
 Insert into Customer values (1, 'Rahul', 'Delhi'),
-(2, 'Raj', 'Mumbai'),
-(101, 'Ravi', 'Kolkata'),
-(4, 'Ramesh', 'Pune'),
-(5, 'Rajesh', 'Baroda'),
-(6, 'Rakesh', 'Hyderabad'),
-(7, 'Rajat', 'Pune'),
-(8, 'Rajeev', 'Ahmedabad'),
-(9, 'Rajkumar', 'Jaipur'),
-(10, 'Rajesh', 'Ahmedabad');
+                            (2, 'Raj', 'Mumbai'),
+                            (101, 'Ravi', 'Kolkata'),
+                            (4, 'Ramesh', 'Pune'),
+                            (5, 'Rajesh', 'Baroda'),
+                            (6, 'Rakesh', 'Hyderabad'),
+                            (7, 'Rajat', 'Pune'),
+                            (8, 'Rajeev', 'Ahmedabad'),
+                            (9, 'Rajkumar', 'Jaipur'),
+                            (10, 'Rajesh', 'Ahmedabad');
 
 Insert into Order_master values (1, 1, '2020-01-01'),
-(2, 2, '2020-01-02'),
-(3, 101, '2020-02-03'),
-(4, 4, '2020-03-04'),
-(5, 5, '2020-04-05'),
-(6, 6, '2020-05-06'),
-(8, 8, '2020-06-08'),
-(9, 9, '2020-07-09'),
-(10, 10, '2020-08-10');
+                                (2, 2, '2020-01-02'),
+                                (3, 101, '2020-02-03'),
+                                (4, 4, '2020-03-04'),
+                                (5, 5, '2020-04-05'),
+                                (6, 6, '2020-05-06'),
+                                (8, 8, '2020-06-08'),
+                                (9, 9, '2020-07-09'),
+                                (10, 10, '2020-08-10');
 
 Insert into Order_detail values (1, 1),
 (2, 2),
@@ -108,6 +122,12 @@ return total;
 end$$
 delimiter ;
 select funct(1);
+
+
+Class:
+Q. Display order date of product where price < 20000.
+=>
+select orderdate from Order_master where orderid in (select orderid from Order_detail where itemid in (select itemid from Item where Price < 20000));
 
 
 

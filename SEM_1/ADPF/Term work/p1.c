@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include<stdio.h> //Collatz
 int f(int n){
     static int cnt = 0;
     // printf("f(%d)\n",n);
