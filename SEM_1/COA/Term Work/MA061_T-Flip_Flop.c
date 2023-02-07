@@ -22,12 +22,13 @@ void T_Flip_Flop(int T,int clc)
     }
 }
 int main(){
-    int T = 1,clc=1;
+    int T,clc;
     printf("Enter greater than 1 to exit:");
     while (1){
         printf("\nEnter T and clc: ");
         scanf("%d",&T);
-        if (T>1) break;
+        // printf("T = %d",T);
+        if (T>1 || T<0) break;
         scanf("%d",&clc);
         printf("Previous[%d %d]",Q,Q_comp);
         T_Flip_Flop(T,clc);
