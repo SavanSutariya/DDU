@@ -1,0 +1,158 @@
+- perform the following using MySQL Create following tables choose appropriate datatype. And insert appropriate records according to your choice.
+Item(itemid,Iname,Price) Itemid is primary key
+Customer(custid,customername,city) custid is primary key
+Order_master(orderid,custid,orderdate) orderid is primary key
+Order_detail(orderid,itemid) orderid foreign key from order_master, itemid is 
+foreign key from Item table
+
+Create database Term_Work;
+Create table Item (itemid int(10) not null auto_increment,
+                 Iname varchar(20) not null, 
+                 Price int(10) not null, 
+                 primary key(itemid));
+Create table Customer (custid int(10) not null auto_increment,
+                 customername varchar(20) not null,
+                 city varchar(20) not null,
+                 primary key(custid));
+Create table Order_master (orderid int(10) not null auto_increment,
+                         custid int(10) not null, 
+                         orderdate date not null, 
+                         primary key(orderid), 
+                         foreign key(custid) references Customer(custid));
+Create table Order_detail (orderid int(10) not null,
+                         itemid int(10) not null, 
+                         foreign key(orderid) references Order_master(orderid), 
+                         foreign key(itemid) references Item(itemid));
+
+
+Insert into Item values (1, 'Laptop', 50000),
+                        (2, 'Mobile', 10000),
+                        (3, 'Tablet', 20000),
+                        (4, 'Camera', 30000),
+                        (5, 'Headphone', 5000),
+                        (6, 'Mouse', 1000),
+                        (7, 'Keyboard', 2000),
+                        (8, 'Speaker', 3000),
+                        (9, 'Charger', 500),
+                        (10, 'Pen Drive', 1000);
+
+Insert into Customer values (1, 'Rahul', 'Delhi'),
+                            (2, 'Raj', 'Mumbai'),
+                            (101, 'Ravi', 'Kolkata'),
+                            (4, 'Ramesh', 'Pune'),
+                            (5, 'Rajesh', 'Baroda'),
+                            (6, 'Rakesh', 'Hyderabad'),
+                            (7, 'Rajat', 'Pune'),
+                            (8, 'Rajeev', 'Ahmedabad'),
+                            (9, 'Rajkumar', 'Jaipur'),
+                            (10, 'Rajesh', 'Ahmedabad');
+
+Insert into Order_master values (1, 1, '2020-01-01'),
+                                (2, 2, '2020-01-02'),
+                                (3, 101, '2020-02-03'),
+                                (4, 4, '2020-03-04'),
+                                (5, 5, '2020-04-05'),
+                                (6, 6, '2020-05-06'),
+                                (8, 8, '2020-06-08'),
+                                (9, 9, '2020-07-09'),
+                                (10, 10, '2020-08-10');
+
+Insert into Order_detail values (1, 1),
+(2, 2),
+(3, 3),
+(4, 3),
+(5, 5),
+(6, 6),
+(8, 8),
+(9, 9),
+(10, 10);
+
+1. Display all the Item details whose price is grater than 1000.
+=>
+select * from Item where Price > 1000;
+
+2. Display all the orderid which are from city 'Ahmedabad'.
+=>
+select orderid from Order_master where custid in (select custid from Customer where city='baroda');
+
+3. Display all orderid for item “mobile”.
+=>
+select orderid from order_detail where itemid in (select itemid from Item where Iname = 'Mobile');
+
+4. Display all the customer name who has not give any order.
+=>
+select customername from Customer where custid not in (select custid from order_master);
+
+5. Display the all the name of item which is order before 23-20-2020
+=>
+select Iname from Item where itemid in (select itemid from Order_detail where orderid in (select orderid from Order_master where orderdate < '2020-02-23'));
+
+6. Display all name of items which is or1der by customerid=101
+=>
+select Iname from Item where itemid in (select itemid from Order_detail where orderid in (select orderid from Order_master where custid=101));
+
+7. Count the total number of customer city wise.
+=>
+select city, count(custid) from Customer group by city;
+
+8. Add the 200 rs in existing price of item “mobile”
+=>
+update Item set Price = Price + 200 where Iname = 'Mobile';
+
+9. Create procedure which pass the item name as argument and display orderid 
+of orders for given itemname
+=>
+delimiter $$
+create procedure orderid_for_itemname(IN itemname varchar(20))
+begin
+select orderid from order_detail where itemid in(select itemid from Item where Iname = itemname);
+end$$
+delimiter ;
+call orderid_for_itemname('Mobile');
+
+10. create a function called funct() which pass orderid as argument and count 
+the total cost of given orderid.
+=>
+delimiter $$
+create function funct(id int(10)) returns int(10) DETERMINISTIC
+begin
+declare total int(100);
+select sum(Price) into total from Item where itemid in (select itemid from Order_detail where orderid = id);
+return total;
+end$$
+delimiter ;
+select funct(1);
+
+
+Class:
+Q. Display order date of product where price < 20000.
+=>
+select orderdate from Order_master where orderid in (select orderid from Order_detail where itemid in (select itemid from Item where Price < 20000));
+
+
+
+============================
+select * from Item where Price > 1000;
+select orderid from Order_master where custid in (select custid from Customer where city='baroda');
+select orderid from order_detail where itemid in (select itemid from Item where Iname = 'Mobile');
+select customername from Customer where custid not in (select custid from order_master);
+select Iname from Item where itemid in (select itemid from Order_detail where orderid in (select orderid from Order_master where orderdate < '2020-02-23'));
+select Iname from Item where itemid in (select itemid from Order_detail where orderid in (select orderid from Order_master where custid=101));
+select city, count(custid) from Customer group by city;
+update Item set Price = Price + 200 where Iname = 'Mobile';
+delimiter $$
+create procedure orderid_for_itemname(IN itemname varchar(20))
+begin
+select orderid from order_detail where itemid in(select itemid from Item where Iname = itemname);
+end$$
+delimiter ;
+call orderid_for_itemname('Mobile');
+delimiter $$
+create function funct(id int(10)) returns int(10) DETERMINISTIC
+begin
+declare total int(100);
+select sum(Price) into total from Item where itemid in (select itemid from Order_detail where orderid = id);
+return total;
+end$$
+delimiter ;
+select funct(1);
