@@ -1,4 +1,4 @@
-[![Last Commit](https://www.ddu.ac.in/images/University/nav-img.png)](https://www.ddu.ac.in/)
+[![DDU logo](https://www.ddu.ac.in/images/University/nav-img.png)](https://www.ddu.ac.in/)
 # Dharmsinh Desai University | MCA | 2022-2024
 
 ## Getting Started
@@ -32,5 +32,7 @@ Only Pull Requests matching the **naming-conventions** (Folders and Files) will 
 Users who spam this Repo with PRs/Issues that does not align the Contribution Guidelines will be **blocked**.
 
 [![Last Commit](https://img.shields.io/github/last-commit/SavanSutariya/ddu)](https://github.com/SavanSutariya/DDU)
+## Contributors
+[![contributors](https://contrib.rocks/image?repo=savansutariya/ddu)](https://github.com/savansutariya/ddu/graphs/contributors)
 
 __Thank You!__ 
