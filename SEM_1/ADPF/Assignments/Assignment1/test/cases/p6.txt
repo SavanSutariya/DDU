@@ -1,0 +1,4 @@
+5 12 13,Right-angle_Triangle
+9 9 9,Equilateral_Triangle
+3 4 3,Isosceles_Triangle
+3 2 4,Scalene_Triangle
