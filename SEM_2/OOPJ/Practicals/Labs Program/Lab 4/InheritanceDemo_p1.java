@@ -1,12 +1,6 @@
 // A class to represent a vehicle
 class Vehicle {
-    private String make;
-
-    // Constructor to initialize the make field
-    public Vehicle(String make) {
-        this.make = make;
-    }
-
+    private String make
     // Getter method for the make field
     public String getMake() {
         return this.make;
