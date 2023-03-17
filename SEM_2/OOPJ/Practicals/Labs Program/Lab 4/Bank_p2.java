@@ -145,6 +145,15 @@ class FixedDeposit extends Account {
 
     // Method to calculate the interest amount
     public double calIntAmt() {
+        if (this.getYear() <= 2) {
+            this.rate = 6.5;
+        } else if (this.getYear() > 2 && this.getYear() <= 5) {
+            this.rate = 7.5;
+        } else if (this.getYear() > 5 && this.getYear() <= 10) {
+            this.rate = 8.5;
+        } else {
+            this.rate = 9;
+        }
         return (this.getAmount() * this.getRate() * this.getYear()) / 100;
     }
 }
