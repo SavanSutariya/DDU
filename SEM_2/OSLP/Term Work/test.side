@@ -1,0 +1,807 @@
+{
+  "id": "e807a7f4-88f9-4b2b-a14c-9e340782be1b",
+  "version": "2.0",
+  "name": "CSAVisualizer",
+  "url": "http://127.0.0.1:5500/index.html",
+  "tests": [{
+    "id": "083cd693-32bf-4407-97a1-bac0c250f22a",
+    "name": "insert data to table",
+    "commands": [{
+      "id": "cf21f946-0f30-4c51-a5ec-d5d8dd9d5317",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e15e23c8-d3f9-49a1-8080-52dc0c98134f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1281x689",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e468500-3acd-479f-9efc-9a6ec4c12366",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa829743-205c-44f9-9d99-113e7abf1a52",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "p4"
+    }, {
+      "id": "c25b22ce-4695-4492-ae59-61cdbdfc5793",
+      "comment": "",
+      "command": "click",
+      "target": "name=burstTime",
+      "targets": [
+        ["name=burstTime", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='burstTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "113ad96f-f2e9-4df1-842c-19cc0a687f3a",
+      "comment": "",
+      "command": "type",
+      "target": "name=burstTime",
+      "targets": [
+        ["name=burstTime", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='burstTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "7"
+    }, {
+      "id": "e25d8e68-0c0d-4702-8eb6-7b0311fe1dec",
+      "comment": "",
+      "command": "click",
+      "target": "name=arrivalTime",
+      "targets": [
+        ["name=arrivalTime", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='arrivalTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4744d4a-40c9-4491-9e9f-70c9a48295ee",
+      "comment": "",
+      "command": "type",
+      "target": "name=arrivalTime",
+      "targets": [
+        ["name=arrivalTime", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='arrivalTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "c8245fc7-c192-4897-aee7-d2db0386b102",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-2",
+      "targets": [
+        ["css=.mt-2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Process')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ecaeaea9-40cd-4965-befd-96f798f494a0",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3545f246-0e2a-4e12-a046-93e42027c1b1",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "p2"
+    }, {
+      "id": "4a0c834a-ec58-45ba-bc85-b72388a5743b",
+      "comment": "",
+      "command": "click",
+      "target": "name=burstTime",
+      "targets": [
+        ["name=burstTime", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='burstTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29e883c5-7262-4c1d-baea-76c5a37eba6a",
+      "comment": "",
+      "command": "type",
+      "target": "name=burstTime",
+      "targets": [
+        ["name=burstTime", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='burstTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "4"
+    }, {
+      "id": "847d8b3d-bf2b-4c44-a3f0-24144f392e52",
+      "comment": "",
+      "command": "click",
+      "target": "name=arrivalTime",
+      "targets": [
+        ["name=arrivalTime", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='arrivalTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "01c13deb-c39e-4ee7-aae8-f0413643ba6d",
+      "comment": "",
+      "command": "type",
+      "target": "name=arrivalTime",
+      "targets": [
+        ["name=arrivalTime", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='arrivalTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "db30575e-1343-4417-95df-d04452a7f87a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-2",
+      "targets": [
+        ["css=.mt-2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Process')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e175630d-de59-40a0-a66d-9d2eabe4fa65",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb4706d0-08dc-429b-b357-3b9338f21cfc",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "p1"
+    }, {
+      "id": "496856c2-7590-4710-b24c-cdb72724c0ae",
+      "comment": "",
+      "command": "type",
+      "target": "name=burstTime",
+      "targets": [
+        ["name=burstTime", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='burstTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "9909998c-9721-412f-aaa0-282c805e8818",
+      "comment": "",
+      "command": "type",
+      "target": "name=arrivalTime",
+      "targets": [
+        ["name=arrivalTime", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='arrivalTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "80966702-7818-4f1f-b5af-b7d57389f884",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-2",
+      "targets": [
+        ["css=.mt-2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Process')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf8ffd77-ce47-4cb3-9cdb-a512c652e80d",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb8235f2-7b19-4e57-b455-d3b74be9753a",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "p3"
+    }, {
+      "id": "e688f888-bba0-418f-8e72-74497e552b2a",
+      "comment": "",
+      "command": "type",
+      "target": "name=burstTime",
+      "targets": [
+        ["name=burstTime", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='burstTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "8"
+    }, {
+      "id": "4e7dcae1-faed-45b9-9fa4-33170fd49cdf",
+      "comment": "",
+      "command": "type",
+      "target": "name=arrivalTime",
+      "targets": [
+        ["name=arrivalTime", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='arrivalTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "c1a80923-8ec6-4fb8-a777-264f09a46f52",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-2",
+      "targets": [
+        ["css=.mt-2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Process')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "523900da-e93d-4108-9cb0-be5e9b004738",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e7cdb1b-6ba2-49b5-a6f6-ef8b2e310251",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "p0"
+    }, {
+      "id": "4d043ba9-b1ef-48d7-8e6d-47469cb67f9c",
+      "comment": "",
+      "command": "type",
+      "target": "name=burstTime",
+      "targets": [
+        ["name=burstTime", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='burstTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "8"
+    }, {
+      "id": "cce10b91-3d26-4dc5-b50e-221193f36d90",
+      "comment": "",
+      "command": "type",
+      "target": "name=arrivalTime",
+      "targets": [
+        ["name=arrivalTime", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='arrivalTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "7"
+    }, {
+      "id": "89729a3b-7960-470e-bbac-c567ec8039f4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-2",
+      "targets": [
+        ["css=.mt-2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Process')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d63aa272-84f3-4a18-a373-29df44162199",
+    "name": "geekforgeeks",
+    "commands": [{
+      "id": "fe69675d-a508-4347-b5c5-e02278588868",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7b6f2d0-791f-4690-bfdd-6d677fabf6eb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "783x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "472dff1e-7ecf-4a0e-86c6-557c3bdd4755",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "469f5f31-6d41-4d54-9173-37550f94a1d9",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8b2dd9c-44f5-4e10-8f79-f958a78d260a",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "p1"
+    }, {
+      "id": "951aa4d6-2b17-4c8d-87fa-871dcec40c20",
+      "comment": "",
+      "command": "type",
+      "target": "name=burstTime",
+      "targets": [
+        ["name=burstTime", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='burstTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "4"
+    }, {
+      "id": "8d7ddef3-66e4-4fee-bf91-9747a4ff6936",
+      "comment": "",
+      "command": "type",
+      "target": "name=arrivalTime",
+      "targets": [
+        ["name=arrivalTime", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='arrivalTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "280d71e7-c434-4ef8-9c9c-811cb5b6d2b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-2",
+      "targets": [
+        ["css=.mt-2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Process')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "82c083d5-6cba-479f-9cf5-29db46a0005c",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90678396-e0c9-4553-a6e4-54c6da96ea07",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "p2"
+    }, {
+      "id": "4c2ac05b-f9cc-4927-af8d-3436463f32b9",
+      "comment": "",
+      "command": "type",
+      "target": "name=burstTime",
+      "targets": [
+        ["name=burstTime", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='burstTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "93666c65-ed7f-4bd9-b8b0-c8fec12e97b3",
+      "comment": "",
+      "command": "type",
+      "target": "name=arrivalTime",
+      "targets": [
+        ["name=arrivalTime", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='arrivalTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "82550d8a-931e-45e3-9f6b-e1ef6eb522bc",
+      "comment": "",
+      "command": "click",
+      "target": "name=burstTime",
+      "targets": [
+        ["name=burstTime", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='burstTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7e40fa1-87ab-47b4-a2a6-3d5c7e25425e",
+      "comment": "",
+      "command": "type",
+      "target": "name=burstTime",
+      "targets": [
+        ["name=burstTime", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='burstTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "28f4e168-06e6-4048-abf9-a334a5dcf53d",
+      "comment": "",
+      "command": "type",
+      "target": "name=arrivalTime",
+      "targets": [
+        ["name=arrivalTime", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='arrivalTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "f821677f-79eb-4745-8ef2-96b74e6a15ca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-2",
+      "targets": [
+        ["css=.mt-2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Process')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "91bde6a1-5a0a-4165-b5ff-bec159b373b7",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1aceb703-4d53-4700-9a4a-d1407061dd09",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "p3"
+    }, {
+      "id": "2201d04b-36ce-4f62-bbeb-79cbd863c7f9",
+      "comment": "",
+      "command": "type",
+      "target": "name=burstTime",
+      "targets": [
+        ["name=burstTime", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='burstTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "5750365f-9600-4ba2-841c-cc5e476859ad",
+      "comment": "",
+      "command": "type",
+      "target": "name=arrivalTime",
+      "targets": [
+        ["name=arrivalTime", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='arrivalTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "279e54be-c642-4d75-a560-944fe7ed1a19",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-2",
+      "targets": [
+        ["css=.mt-2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Process')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b8bf3ea-4361-43d8-908a-8b193315dfa5",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec772a45-1d99-4b42-a6c8-27659924e382",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "p4"
+    }, {
+      "id": "61e1cefa-7d97-4cc0-aa7c-5054a0eb7532",
+      "comment": "",
+      "command": "type",
+      "target": "name=burstTime",
+      "targets": [
+        ["name=burstTime", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='burstTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "8314e1dd-0a90-4dcf-8d11-4e217d89825f",
+      "comment": "",
+      "command": "type",
+      "target": "name=arrivalTime",
+      "targets": [
+        ["name=arrivalTime", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='arrivalTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "97d07f21-3be6-4014-b26d-994d41cfc914",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-2",
+      "targets": [
+        ["css=.mt-2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Process')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c736c32-a3c1-423f-b583-4b21a3406cf6",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "941f9d2b-af79-48c4-b07e-3471f6ca7c4e",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "p5"
+    }, {
+      "id": "6d3ea0fb-7d82-4958-b3d6-1f03908dbd6e",
+      "comment": "",
+      "command": "type",
+      "target": "name=burstTime",
+      "targets": [
+        ["name=burstTime", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='burstTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "5f907211-3800-433b-80be-51eb2237ffcd",
+      "comment": "",
+      "command": "type",
+      "target": "name=arrivalTime",
+      "targets": [
+        ["name=arrivalTime", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='arrivalTime']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "4"
+    }, {
+      "id": "75e75e51-c43f-420f-81a8-943cfad4cb3b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-2",
+      "targets": [
+        ["css=.mt-2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='add-process-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Process')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "48090078-ba21-4085-9ea5-2f65b1e4dbeb",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["083cd693-32bf-4407-97a1-bac0c250f22a"]
+  }],
+  "urls": ["http://127.0.0.1:5500/index.html"],
+  "plugins": []
+}
