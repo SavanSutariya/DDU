@@ -1,63 +1,63 @@
-#define MAX 100 // maximum size of stack
-
-struct char_stack {
+#include<stdio.h>
+#include<stdlib.h>
+struct stack{
     int top;
-    char arr[MAX];
+    int size;
+    char *arr;
 };
-int is_full(struct char_stack *s) {
-    return s->top == MAX - 1;
+void init(struct stack *s, int size){
+    s->top = -1;
+    s->size = size;
+    s->arr = (char *)malloc(s->size*sizeof(char));
 }
-
-int is_empty(struct char_stack *s) {
-    return s->top == -1;
+void push(struct stack *s, char c){
+    if(s->top < s->size){
+        s->arr[++s->top] = c;
+    }
+    else{
+        printf("Stack Overflow");
+    }
 }
-void push(struct char_stack *s, char item) {
-    if (is_full(s)) {
-        printf("Stack Overflow!");
-        return;
+char pop(struct stack *s){
+    if(s->top  > -1){
+        return s->arr[s->top--];
     }
-    s->top++;
-    s->arr[s->top] = item;
+    else{
+        printf("Stack Underflow");
+        return 0;
+    }
 }
-
-char pop(struct char_stack *s) {
-    if (is_empty(s)) {
-        printf("Stack Underflow!");
-        return '\0';
+char peek(struct stack *s){
+    if(s->top == -1){
+        printf("Stack is empty");
+        return 0;
     }
-
-    char item = s->arr[s->top];
-    s->top--;
-    return item;
+    else{
+        return s->arr[s->top];
+    }
 }
-
-char peep(struct char_stack *s, int i) {
-    if (is_empty(s)) {
-        printf("Stack Underflow!");
-        return '\0';
+void display(struct stack *s){
+    int i = s->top;
+    while(i>-1){
+        printf("%c _ ",s->arr[i--]);
     }
-
-    return s->arr[s->top-i+1];
 }
-
-void display(struct char_stack *s) {
-    if (is_empty(s)) {
-        printf("Stack is empty!\n");
-        return;
+void change(struct stack *s, int index, char value){
+    if(index <= s->top && index > -1){
+        s->arr[index] = value;
     }
-
-    printf("Stack: ");
-    for (int i = s->top; i >= 0; i--) {
-        printf("%c ", s->arr[i]);
+    else{
+        printf("Invalid index");
     }
-    printf("\n");
 }
-
-void change(struct char_stack *s, int index, char item) {
-    if (index < 0 || index > s->top) {
-        printf("Index out of range!");
-        return;
+int is_full(struct stack *s){
+    if(s->top >= s->size){
+        return 1;
     }
-
-    s->arr[index] = item;
+    else{
+        return 0;
+    }
+}
+int is_empty(struct stack *s){
+    return (s->top == -1);
 }
